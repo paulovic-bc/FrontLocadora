@@ -1,0 +1,17 @@
+.card {
+    max-width: 100%;
+    margin: 4px;
+}
+
+.card-img-top {
+    height: 300px;
+}
+
+.card-text {
+    padding: 1px;
+    height: 60px;
+}
+
+.btn {
+    margin-top: 10px;
+}

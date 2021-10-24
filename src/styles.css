@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+.contrast,
+.contrast nav,
+.contrast div {
+    background: black !important;
+    color: white !important;
+    border-color: white !important;
+}
+
+.contrast div,
+.contrast nav {
+    border-bottom: 1px solid white;
+}
+
+.contrast body,
+.contrast h1,
+.contrast h2,
+.contrast h3,
+.contrast h4,
+.contrast h5,
+.contrast p,
+.contrast .contrast span {
+    color: white !important;
+}
+
+.contrast option,
+.contrast body {
+    background: black !important;
+    color: yellow !important;
+}
+
+.contrast td {
+    background: black !important;
+    color: white !important;
+}
+
+.contrast img {
+    background: rgb(255, 255, 255) !important;
+    color: yellow !important;
+}
+
+.contrast ul {
+    background: black !important;
+    color: yellow !important;
+}
+
+.contrast a,
+.contrast button {
+    background: black !important;
+    color: yellow !important;
+    border: 1px solid yellow !important;
+}
+
+.contrast select,
+.contrast input {
+    background: black !important;
+    color: white !important;
+    border: 1px solid white !important;
+}

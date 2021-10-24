@@ -1,0 +1,17 @@
+<div class="container" style="margin-top:70px">
+    <form [formGroup]="formCat" class="row g-3">
+        <h3>Cadastro de Categoria</h3>
+        <div class="col-md-4">
+            <label for="nome_categoria" class="form-label">Nome: </label>
+            <input type="text" class="form-control" formControlName="nome_categoria">
+        </div>
+        <div class="col-md-4">
+            <label for="tag_categoria" class="form-label">Tag:</label>
+            <input type="text" class="form-control" formControlName="tag_categoria">
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" (click)="CreatCat()"> Enviar</button>
+        </div>
+    </form>
+</div>
