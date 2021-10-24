@@ -40,8 +40,24 @@ export class MovieCadfilmeFormComponent implements OnInit {
     });
 
 
+
+
    this.carregarCat()
    this.getFilmeList()
+  }
+
+  editFilme(id,filme: FilmeModel):void{
+    console.log(id)
+    this.cadFilme.setValue({
+      titulo_filme: id.titulo_filme,
+      sinopse_filme: id.sinopse_filme,
+      imagem_filme: id.imagem_filme,
+      data_lancamento:  id.data_lancamento,
+      duracao_filme: id.duracao_filme,
+      categoria: id.categoria.id,
+    });
+    this.FilmeServ.deleteFilme(id.id).subscribe(data => {});
+
   }
 
   carregarCat(){
@@ -77,15 +93,12 @@ export class MovieCadfilmeFormComponent implements OnInit {
   }
 
 
-  edittFilme(id:number){
-    console.log(id);
 
-
-  }
 
   dellFilme(id){
 
     this.FilmeServ.deleteFilme(id).subscribe(data => {});
+    alert("FIlme deletado com sucesso!");
     window.location.reload();
 
 

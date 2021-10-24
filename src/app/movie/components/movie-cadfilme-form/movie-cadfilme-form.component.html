@@ -32,6 +32,8 @@
         </div>
         <div class="col-12">
             <button type="submit" class="btn btn-primary" (click)="createFilme()"> Enviar</button>
+
+
         </div>
     </form>
     <br>
@@ -61,7 +63,7 @@
 
 
                 <td>
-                    <button area-label="Editar" type="submit" class="btn btn-success" (click)="edittFilme(list,i)">Editar</button>
+                    <button area-label="Editar" type="submit" class="btn btn-success" (click)="editFilme(list,id)">Editar</button>
                     <button area-label="Deletar" type="submit" class="btn btn-warning" (click)="dellFilme(list.id)"> Deletar</button>
                 </td>
 
