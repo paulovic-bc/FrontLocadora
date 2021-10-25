@@ -12,7 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MovieCadfilmeFormComponent } from './movie/components/movie-cadfilme-form/movie-cadfilme-form.component';
 import { MovieCadCategoriaFormComponent } from './movie/components/movie-cad-categoria-form/movie-cad-categoria-form.component';
-import { MovieCadUsersFormComponent } from './movie/components/movie-cad-users-form/movie-cad-users-form.component'
+
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import { MovieCadUsersFormComponent } from './movie/components/movie-cad-users-f
     MovieLoginFormComponent,
     MovieCadfilmeFormComponent,
     MovieCadCategoriaFormComponent,
-    MovieCadUsersFormComponent,
+
   ],
   imports: [
 

@@ -2,16 +2,47 @@
     <form [formGroup]="formCat" class="row g-3">
         <h3>Cadastro de Categoria</h3>
         <div class="col-md-4">
-            <label for="nome_categoria" class="form-label">Nome: </label>
-            <input type="text" class="form-control" formControlName="nome_categoria">
+            <label for="nome_categoria" aria-label="Nome" class="form-label">Nome: </label>
+            <input type="text" class="form-control" formControlName="nome_categoria" placeholder="Nome">
         </div>
         <div class="col-md-4">
-            <label for="tag_categoria" class="form-label">Tag:</label>
-            <input type="text" class="form-control" formControlName="tag_categoria">
+            <label for="tag_categoria" class="form-label" aria-label="tag da Categoria">Tag da Categoria:</label>
+            <input type="text" class="form-control" formControlName="tag_categoria" placeholder="Tag">
         </div>
 
         <div class="col-12">
             <button type="submit" class="btn btn-primary" (click)="CreatCat()"> Enviar</button>
         </div>
     </form>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th tabindex="0" area-label="Titulo" scope="col">Categoria</th>
+                <th tabindex="0" area-label="Sinpse" scope="col">Tag</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let list of ListCatForm , index as i">
+                <td tabindex="0" [attr.aria-label]="list.nome_categoria">{{list.nome_categoria}}</td>
+                <td tabindex="0" [attr.aria-label]="list.tag_categoria">{{list.tag_categoria}}</td>
+
+
+
+
+
+
+                <td>
+                    <button area-label="Editar" type="submit" class="btn btn-success" (click)="editCat(list,id)">Editar</button>
+                    <button area-label="Deletar" type="submit" class="btn btn-warning" (click)="deleteCategory(list.id)"> Deletar</button>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
 </div>

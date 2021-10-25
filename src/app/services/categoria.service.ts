@@ -19,27 +19,21 @@ export class CategoriaService {
   }
   addCategory(category:any):Observable<CategoriaModel>{
     const token = localStorage.getItem('login')||''
-
       const headers = new HttpHeaders().append('Authorization',token)
       return this.http.post<any>('api/categoria', category, {headers})
 
   }
   editCategory(category:CategoriaModel){
-    const token = localStorage.getItem('login')
-    if (token != null){
+    const token = localStorage.getItem('login')||''
       const headers = new HttpHeaders().append('Authorization',token)
-      return this.http.post<CategoriaModel>('api/categoria', category, {headers})
-    }else{
-      return "Usuario não autentificado"
-    }
+      return this.http.put<CategoriaModel>('api/categoria/', category, {headers})
+
   }
   deleteCategory(id: number){
-    const token = localStorage.getItem('login')
-    if (token != null){
+    const token = localStorage.getItem('login')||''
       const headers = new HttpHeaders().append('Authorization',token)
-      return this.http.put<any>('api/categoria' + id, {headers})
-    }else{
-      return "Usuario não autentificado"
-    }
+      return this.http.delete<any>('api/categoria/' + id, {headers})
+
+
   }
 }
